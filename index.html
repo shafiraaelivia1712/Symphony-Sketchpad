@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symphony Sketchpad UI</title>
+    <!-- Menghubungkan file CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="title-group">
+                <div class="icon-music">🎵</div>
+                SYMPHONY
+            </div>
+            <div class="controls">
+                <button class="control-btn" id="clearBtn">🗑️</button>
+                <button class="control-btn">↩️</button>
+                <button class="control-btn">ℹ️</button>
+                <button class="control-btn share">🔗</button>
+            </div>
+        </div>
+
+        <!-- Canvas Area -->
+        <div class="canvas-container">
+            <canvas id="sketchpad"></canvas>
+        </div>
+
+        <!-- Palette Area -->
+        <div class="palette-header">
+            <span>MUSIC PALETTE</span>
+            <span class="current-tool" id="currentToolText">TRUMPET</span>
+        </div>
+
+        <div class="palette-grid">
+            <!-- Row 1 -->
+            <div class="pad active" data-tool="TRUMPET" data-color="#ff453a">
+                <div class="dot c-red"></div>
+                <div class="pad-label">TRUMPET</div>
+            </div>
+            <div class="pad" data-tool="CRYSTAL BELL" data-color="#64d2ff">
+                <div class="dot c-cyan"></div>
+                <div class="pad-label">CRYSTAL BELL</div>
+            </div>
+            <div class="pad" data-tool="SPACE SYNTH" data-color="#bf5af2">
+                <div class="dot c-purple"></div>
+                <div class="pad-label">SPACE SYNTH</div>
+            </div>
+            <!-- Row 2 -->
+            <div class="pad" data-tool="PIANO" data-color="#0a84ff">
+                <div class="dot c-blue"></div>
+                <div class="pad-label">PIANO</div>
+            </div>
+            <div class="pad" data-tool="MARIMBA" data-color="#ff9f0a">
+                <div class="dot c-orange"></div>
+                <div class="pad-label">MARIMBA</div>
+            </div>
+            <div class="pad" data-tool="CYMBALS" data-color="#ffd60a">
+                <div class="dot c-yellow"></div>
+                <div class="pad-label">CYMBALS</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menghubungkan file JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

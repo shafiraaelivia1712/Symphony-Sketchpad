@@ -1,0 +1,175 @@
+:root {
+    --bg-main: #333338;
+    --bg-canvas: #26262a;
+    --bg-pad: #424248;
+    --text-light: #ffffff;
+    --text-muted: #8e8e93;
+    --accent-blue: #0a84ff;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #1a1a1c; /* Background luar */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main App Container */
+.app-container {
+    width: 400px;
+    background-color: var(--bg-main);
+    border-radius: 24px;
+    padding: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 0 5px;
+}
+
+.title-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-light);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.icon-music {
+    background-color: #8c52ff;
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.controls {
+    display: flex;
+    gap: 8px;
+}
+
+.control-btn {
+    background-color: #4a4a50;
+    border: none;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.control-btn.share {
+    background-color: var(--accent-blue);
+}
+
+/* Canvas Area */
+.canvas-container {
+    width: 100%;
+    height: 350px;
+    background-color: var(--bg-canvas);
+    border-radius: 16px;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+    /* Grid Titik-titik (Dot Grid Background) */
+    background-image: radial-gradient(#55555d 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-position: 0 0;
+    border: 2px solid #3f3f46;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: crosshair;
+}
+
+/* Palette Section */
+.palette-header {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    padding: 0 5px;
+}
+
+.current-tool {
+    color: var(--text-light);
+}
+
+.palette-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.pad {
+    background-color: var(--bg-pad);
+    border-radius: 12px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.pad:hover {
+    background-color: #4f4f56;
+}
+
+.pad.active {
+    background-color: #4a3b40; /* Sedikit kemerahan */
+    border: 2px solid #ff453a;
+}
+
+.dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.pad-label {
+    color: var(--text-light);
+    font-size: 9px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Warna Titik Instrumen */
+.c-red { background-color: #ff453a; box-shadow: 0 0 10px #ff453a80; }
+.c-cyan { background-color: #64d2ff; box-shadow: 0 0 10px #64d2ff80; }
+.c-purple { background-color: #bf5af2; box-shadow: 0 0 10px #bf5af280; }
+.c-blue { background-color: #0a84ff; box-shadow: 0 0 10px #0a84ff80; }
+.c-orange { background-color: #ff9f0a; box-shadow: 0 0 10px #ff9f0a80; }
+.c-yellow { background-color: #ffd60a; box-shadow: 0 0 10px #ffd60a80; }
